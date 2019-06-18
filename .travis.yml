@@ -18,7 +18,7 @@ script:
 
 before_deploy:
   - poetry config repositories.testpypi https://test.pypi.org/legacy/
-  - poetry config config http-basic.testpypi "$PYPI_USERNAME" "$PYPI_PASSWORD"
+  - poetry config http-basic.testpypi "$PYPI_USERNAME" "$PYPI_PASSWORD"
 
 deploy:
   provider: script
