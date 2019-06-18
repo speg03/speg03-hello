@@ -16,11 +16,13 @@ install:
 script:
   - poetry run pytest tests/
 
+before_deploy:
+  - poetry config repositories.testpypi https://test.pypi.org/legacy/
+
 deploy:
-  provider: pypi
-  server: https://test.pypi.org/legacy/
-  user: $PYPI_USERNAME
-  password: $PYPI_PASSWORD
+  provider: script
+  script:
+    - poetry publish -r testpypi -u $PYPI_USERNAME -p $PYPI_PASSWORD --build
   on:
     tags: true
 
