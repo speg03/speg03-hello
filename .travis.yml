@@ -22,7 +22,7 @@ before_deploy:
 deploy:
   provider: script
   script:
-    - poetry publish -r testpypi -u $PYPI_USERNAME -p $PYPI_PASSWORD --build
+    - poetry publish -r testpypi -u "$PYPI_USERNAME" -p "$PYPI_PASSWORD" --build
   on:
     tags: true
 
