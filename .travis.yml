@@ -16,6 +16,14 @@ install:
 script:
   - poetry run pytest tests/
 
+deploy:
+  provider: pypi
+  server: https://test.pypi.org/legacy/
+  user: $PYPI_USERNAME
+  password: $PYPI_PASSWORD
+  on:
+    tags: true
+
 branches:
   only:
     - master
