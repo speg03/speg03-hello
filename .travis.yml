@@ -29,4 +29,4 @@ deploy:
 branches:
   only:
     - master
-    - /^v\d+\.\d+.\d+[a-z\d]*/
+    - /^v\d+\.\d+.\d+([a-z]+\d+)?/
