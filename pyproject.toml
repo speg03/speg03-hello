@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "speg03-hello"
-version = "0.0.1a4"
+version = "0.0.1a5"
 description = ""
 authors = ["Takahiro Yano <speg03@gmail.com>"]
 
